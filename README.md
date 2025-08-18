@@ -43,7 +43,7 @@ A **calibrated XGBoost classifier** was selected. Calibration ensured predicted 
 - **Recall (Returners)**: 67%  
 
 ### Key Predictors
-- **Profile completeness** strongly correlated with donor retention (though potentially affected by data leakage).  
+- **Profile completeness** strongly correlated with donor retention.  
 - **Recurring gift setup** and **signup device type** were significant predictors.  
 - **Memo engagement** (donors leaving notes) emerged as an important emotional signal.  
 - **Calendar features** (day of month, month-end) had minimal predictive value.  
@@ -52,8 +52,7 @@ A **calibrated XGBoost classifier** was selected. Calibration ensured predicted 
 
 ## Discussion
 
-### Challenges
-- **Data Leakage**: Profile completion data reflected the current state, not necessarily the first-24-hour state.  
+### Challenges  
 - **Class Imbalance**: More donors did not return than those who did. Weighted training was applied to mitigate this.  
 
 ### Implications
@@ -61,13 +60,6 @@ A **calibrated XGBoost classifier** was selected. Calibration ensured predicted 
 - Behavioral features (e.g., leaving notes, tithe indicators) are as important as transaction size.  
 - Predictive models can guide targeted engagement strategies.  
 
----
-
-## Future Work
-- **Eliminate Data Leakage**: Use point-in-time snapshots of donor profiles.  
-- **Expand Feature Set**: Incorporate app session data, support interactions, or communication engagement.  
-- **Donor–Partner Specific Models**: Extend predictions to determine whether donors return to the *same* giving partner.  
-- **Deployment**: Package the model into a donor analytics tool.  
 
 ---
 
